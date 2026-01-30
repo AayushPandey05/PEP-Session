@@ -1,13 +1,12 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-void reverseInGroups(int arr[],int n, int k) {
-    int n = arr.size();
-    for(int i = 0; i < n; i += k){
+void reverseInGroups(int arr[], int n, int k) {
+    for (int i = 0; i < n; i += k) {
         int left = i;
         int right = min(i + k - 1, n - 1);
 
-        while(left < right){
+        while (left < right) {
             swap(arr[left], arr[right]);
             left++;
             right--;
@@ -15,20 +14,21 @@ void reverseInGroups(int arr[],int n, int k) {
     }
 }
 
-int main(){
+int main() {
     int n;
     cin >> n;
 
     int arr[n];
-    for(int i = 0; i < n; i++){
+    for (int i = 0; i < n; i++) {
         cin >> arr[i];
     }
 
     int k;
     cin >> k;
 
-    reverseInGroups(arr, n);
-    for(int i = 0; i < n; i++){
+    reverseInGroups(arr, n, k);
+
+    for (int i = 0; i < n; i++) {
         cout << arr[i] << " ";
     }
 

@@ -1,2 +1,2 @@
-# PEP-Session
-Projects and assignments of PEP 
+# PEP-Sessio
+Daily Class Exercises ,  Assignments and project of PEP 
